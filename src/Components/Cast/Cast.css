@@ -1,0 +1,12 @@
+.CastWrapper {
+  display: grid;
+  grid-template-columns: 50% 50% 50%;
+  list-style: none;
+  /* margin-bottom: 50px; */
+}
+
+.CastWrapperList {
+  position: relative;
+  margin: 5px;
+  justify-self: center;
+}
