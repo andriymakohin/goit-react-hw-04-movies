@@ -43,12 +43,12 @@ const MovieDetails = () => {
 
   useEffect(() => {
     getDetails(movieId)
-      .then((response) => setFilmDetails({ ...response.data }))
+      .then((response) => setFilmDetails({ ...response.data}))
       .catch((error) => setErrorMessage(error.response.data.status_message));
   }, [movieId]);
   const goBack = () => {
     if (location.state) {
-      history.push(location.state.from);
+      history.push(location.state);
       return;
     }
 
@@ -93,7 +93,7 @@ const MovieDetails = () => {
                     to={{
                       pathname: `${url}/cast`,
                       state: {
-                        from: location.state.from,
+                        from: location.state,
                       },
                     }}
                   >
@@ -105,7 +105,7 @@ const MovieDetails = () => {
                     to={{
                       pathname: `${url}/reviews`,
                       state: {
-                        from: location.state.from,
+                        from: location.state,
                       },
                     }}
                   >
